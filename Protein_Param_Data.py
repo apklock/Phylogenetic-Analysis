@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 """This module contains hydrophobicity indices according to Kyte and Doolittle and 
 DIWV indices for instability calculation according to Guruprasad et al. 1990
 """

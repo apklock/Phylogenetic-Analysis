@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 """This is my protein analysis program which takes an input of amino acids and gives you
 back several key indices and data on your prospective protein or peptide.
 
@@ -27,6 +29,9 @@ Then specify a protein/peptide sequence in the following manner:
 	print(Prot.secondary_structure_fraction())
 	
 Have fun checking out some protein specs!
+
+When used with the Phylogenetic_Analysis program, the various indices will be called up automatically
+Add in this feature!!!!!!!!!!
 """
 
 from __future__ import print_function
@@ -34,6 +39,7 @@ from __future__ import print_function
 import sys
 import Protein_Param_Data
 import Isoelectric_Point
+import Phylogenetic_Analysis
 from Bio.Seq import Seq
 from Bio.Alphabet import IUPAC
 from Bio.Data import IUPACData

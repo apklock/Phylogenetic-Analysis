@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 """Calculate isoelectric points of polypeptides using methods from Bjellqvist et al. 1993 and 1994
 """ 
 
