@@ -39,7 +39,6 @@ from __future__ import print_function
 import sys
 import Protein_Param_Data
 import Isoelectric_Point
-import Phylogenetic_Analysis
 from Bio.Seq import Seq
 from Bio.Alphabet import IUPAC
 from Bio.Data import IUPACData
@@ -48,7 +47,10 @@ from Bio.Data import IUPACData
 class ProteinAnalysis(object):
 
 	def __init__(self, prot_sequence):
-		self.sequence = Seq(prot_sequence, IUPAC.protein)
+		if prot_sequence.islower():
+			self.sequence = Seq(prot_sequence.upper(), IUPAC.protein)
+		else:
+			self.sequence = Seq(prot_sequence, IUPAC.protein)
 		self.amino_acids_content = None
 		self.amino_acids_percent = None
 		self.amino_acids_MW_percent = None
@@ -173,7 +175,7 @@ class ProteinAnalysis(object):
 		"""
 		aa_content = self.count_amino_acids()
 
-		ie_point = Isoelectric_Point.Isoelectric_Point(self.sequence, aa_content)
+		ie_point = Isoelectric_Point.IsoelectricPoint(self.sequence, aa_content)
 		return ie_point.pi()
 
 	def secondary_structure_fraction(self):
@@ -194,3 +196,5 @@ class ProteinAnalysis(object):
 		sheet = sum(aa_percentages[r] for r in 'EMAL')
 
 		return helix, bent, sheet
+
+
