@@ -6,10 +6,10 @@ back several key indices and data on your prospective protein or peptide.
 This program needs BioPython installed for some of the modules to work correctly.
 Also, you will have to have ProteinParamData and IsoelectricPoint compiled on your system.
 
-To call up the program, simply run Protein_Analyzer.
+To call up the program, simply import Protein_Analyzer in a python interpreter.
 Then specify a protein/peptide sequence in the following manner:
 	
-	Prot = Protein_Analyzer("DAEFRHDSGYEVHHQKLVFFAEDVGSNKGAIIGLMVGGVVIA")
+	Prot = Protein_Analyzer.ProteinAnalysis("DAEFRHDSGYEVHHQKLVFFAEDVGSNKGAIIGLMVGGVVIA")
 	
 	This is an example peptide only...it is the A Chain of the Amyloid Beta protein, which is
 	implicated in Alzheimer's disease due to Amyloid plaque creation.  It is a peptide that I
@@ -29,9 +29,6 @@ Then specify a protein/peptide sequence in the following manner:
 	print(Prot.secondary_structure_fraction())
 	
 Have fun checking out some protein specs!
-
-When used with the Phylogenetic_Analysis program, the various indices will be called up automatically
-Add in this feature!!!!!!!!!!
 """
 
 from __future__ import print_function
