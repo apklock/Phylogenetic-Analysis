@@ -3,9 +3,6 @@
 """This is my protein analysis program which takes an input of amino acids and gives you
 back several key indices and data on your prospective protein or peptide.
 
-This program needs BioPython installed for some of the modules to work correctly.
-Also, you will have to have ProteinParamData and IsoelectricPoint compiled on your system.
-
 To call up the program, simply import Protein_Analyzer in a python interpreter.
 Then specify a protein/peptide sequence in the following manner:
 	
@@ -18,15 +15,15 @@ Then specify a protein/peptide sequence in the following manner:
  Once you have specified your protein/peptide you can call up the various indices/data
  using the following manner:
  
-	print(Prot.count_amino_acids())
-	print(Prot.get_amino_acids_percent())
-	print(Prot.molecular_weight())
-	print(Prot.get_amino_acids_MW_percent())
-	print(Prot.aromaticity())
-	print(Prot.instability_index())
-	print(Prot.gravy_index())
-	print(Prot.isoelectric_point())
-	print(Prot.secondary_structure_fraction())
+	print Prot.count_amino_acids()
+	print Prot.get_amino_acids_percent()
+	print Prot.molecular_weight()
+	print Prot.get_amino_acids_MW_percent()
+	print Prot.aromaticity()
+	print Prot.instability_index()
+	print Prot.gravy_index()
+	print Prot.isoelectric_point()
+	print Prot.secondary_structure_fraction()
 	
 Have fun checking out some protein specs!
 """
