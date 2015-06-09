@@ -26,17 +26,17 @@ else:
 if AccessionType == 'DNA':
     gb_dna = genbank.GenBankDna(ids=AN)
     gb_type = gb_dna
-    model_type = ['-m', 'GTRCAT', '-N', '5']
+    model_type = ['-m', 'GTRCAT', '-N', '250']
     
 elif AccessionType == 'RNA':
     gb_rna = genbank.GenBankRna(ids=AN)
     gb_type = gb_rna
-    model_type = ['-m', 'GTRCAT', '-N', '5']
+    model_type = ['-m', 'GTRCAT', '-N', '250']
 
 else:
     gb_prot = genbank.GenBankProtein(ids=AN)
     gb_type = gb_prot
-    model_type = ['-m', 'PROTCATGTR', '-N', '5']
+    model_type = ['-m', 'PROTCATGTR', '-N', '250']
 
 print '\n Here are your query results:\n'
 
